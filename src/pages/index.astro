@@ -1,8 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Challenges from '../components/Challenges.astro'
 ---
 
 <Layout title="Css daily challenge.">
-	<h1>CSS daily challenge</h1>
+	<section class="title">
+		<h1>CSS daily challenge</h1>
+		<p>I will be doing a css challenge daily.</p>
+	</section>
+	<Challenges />
 </Layout>
+
+<style>
+	.title {
+		display: grid;
+		color: rgb(255, 255, 255);
+		font-size: xx-large;
+		text-align: center;
+	}
+</style>

@@ -1,0 +1,109 @@
+---
+
+---
+<div class="frame">
+    <div class="center">
+          <div class="number">
+              <figure class="one-small"></figure>
+          <figure class="one-big"></figure>
+          <figure class="zero-left"></figure>
+          <figure class="zero-right"></figure>
+          </div>
+          <p class="big">days</p>
+          <p class="small">css challenge</p>
+    </div>
+</div>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+    
+    .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+        overflow: hidden;
+    background: linear-gradient(to right top, #43389F, #4ec6ca);
+    color: #333;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+        color: white;
+        font-family: 'Courier New', 'Courier', sans-serif;
+    }
+
+    .number {
+        height: 110px;
+        width: 200px;
+        
+    }
+
+    .one-small {
+        position: absolute;
+        background: #ffffff;
+        height: 50px;
+        width: 22px;
+        left: -30px;
+        transform: rotate(50deg);
+        border-radius: 4px;
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    }
+    .one-big {
+        z-index: 3;
+        left: -10px;
+        position: absolute;
+        background: #ffffff;
+        height: 100px;
+        width: 22px;
+        border-radius: 4px;
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    }
+    .zero-left {
+        z-index: 2;
+        position: absolute;
+        background: transparent;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 22px #fff solid;
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    }
+    .zero-right {
+        left: 90px;
+        position: absolute;
+        background: transparent;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 22px #fff solid;
+        box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    }
+
+    .big {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 6rem;
+    }
+
+    .small {
+        letter-spacing: 3px;
+        position: relative;
+        top: -20px;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
