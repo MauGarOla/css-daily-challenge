@@ -1,0 +1,152 @@
+<div class="frame">
+    <div class="center">
+        <nav class="nav-menu close">
+        <figure class="top"></figure>
+        <figure class="middle"></figure>
+        <figure class="bottom"></figure>
+        </nav>
+    </div>
+</div>
+<style>
+    .frame {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: auto;
+        border-radius: 8px;
+        box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+        overflow: hidden;
+        background: rgba(53,163,121,1);
+    }
+
+    .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+
+    .nav-menu {
+    cursor: pointer;
+    }
+
+    .close {
+    & .top {
+        width: 80px;
+        height: 8px;
+        background: white;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        border-radius: 3px;
+        animation: .6s close-top reverse both;
+    }
+    & .middle {
+        width: 80px;
+        height: 8px;
+        background: white;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        border-radius: 3px;
+        animation: .6s close-middle reverse both;
+    }
+    & .bottom {
+        width: 80px;
+        height: 8px;
+        background: white;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+        border-radius: 3px;
+        animation: .6s close-bottom reverse both;
+    }
+    }
+
+    .open {
+    & .top {
+    position: relative;
+    width: 80px;
+    height: 8px;
+    background: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    animation: .6s open-top forwards;
+    }
+    & .middle {
+    position: relative;
+    width: 80px;
+    height: 8px;
+    background: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    animation: .6s open-middle forwards;
+    }
+    & .bottom {
+    position: relative;
+    width: 80px;
+    height: 8px;
+    background: white;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    animation: .6s open-bottom forwards;
+    }
+    }
+
+    @keyframes close-top {
+    40% {
+        transform: translate(0, 23px);
+    }
+    100% {
+        transform: translate(0, 23px) rotate(135deg);
+    }
+    }
+
+    @keyframes close-middle {
+    30% {
+        transform: scale(0);
+        background: rgba(255,255,255,0.2)
+    }
+    100% {
+        transform: scale(0);
+    }
+    }
+
+    @keyframes close-bottom {
+    40% {
+        transform: translate(0, -23px);
+    }
+    100% {
+        transform: translate(0, -23px) rotate(45deg);
+    }
+    }
+
+    @keyframes open-top {
+    40% {
+        transform: translate(0, 23px);
+    }
+    100% {
+        transform: translate(0, 23px) rotate(135deg);
+    }
+    }
+
+    @keyframes open-middle {
+    30% {
+        transform: scale(0);
+        background: rgba(255,255,255,0.2)
+    }
+    100% {
+        transform: scale(0);
+    }
+    }
+
+    @keyframes open-bottom {
+    40% {
+        transform: translate(0, -23px);
+    }
+    100% {
+        transform: translate(0, -23px) rotate(45deg);
+    }
+    }
+</style>
+<script>
+    const navMenu = document.querySelector(".nav-menu");
+    navMenu.addEventListener("click",() => {
+        navMenu.classList.toggle("close");
+        navMenu.classList.toggle("open")
+    })
+</script>
