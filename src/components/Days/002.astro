@@ -145,8 +145,10 @@
 </style>
 <script>
     const navMenu = document.querySelector(".nav-menu");
-    navMenu.addEventListener("click",() => {
+    if (navMenu) {
+        navMenu.addEventListener("click",() => {
         navMenu.classList.toggle("close");
         navMenu.classList.toggle("open")
     })
+    }
 </script>
