@@ -3,7 +3,7 @@ import One from './Days/001.astro'
 import Two from './Days/002.astro'
 import Three from './Days/003.astro'
 import Four from './Days/004.astro'
-// import Five from './Days/005.astro'
+import Five from './Days/005.astro'
 // import Six from './Days/006.astro'
 // import Seven from './Days/007.astro'
 // import Eight from './Days/008.astro'
@@ -13,18 +13,19 @@ import Four from './Days/004.astro'
     <Two />
     <Three />
     <Four />
-    <!-- <Five />
-    <Six />
+    <Five />
+    <!-- <Six />
     <Seven />
     <Eight /> -->
 </section>
 <style>
     .challenges {
-        width: 90vw;
+        width: 90%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr, 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, 400px);
         gap: 20px;
+        justify-content: center;
     }
 </style>

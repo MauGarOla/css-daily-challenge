@@ -1,0 +1,326 @@
+<div class="frame">
+    <d class="center">
+      <header class="header">
+        <section class="titles">
+          <h1 class="title">Weekly report</h1>
+          <h2 class="subtitle">Revenue</h2>
+        </section>
+        <section class="data">
+          <p class="period">01. Feb - 07. Feb</p>
+          <p class="revenue">$ 3621.79</p>
+        </section>
+      </header>
+      <main class="graph">
+        <section class="graph-titles">
+          <figure class="graph-color first"></figure>
+          <span class="graph-title first">Views</span>
+          <figure class="graph-color space"></figure>
+          <figure class="graph-color second"></figure>
+          <span class="graph-title second">Purchases</span>
+        </section>
+        <section class="graph-data">
+          <figure class="line top"></figure>
+          <figure class="line middle"></figure>
+          <figure class="line bottom"></figure>
+          <section class="data red">
+            <svg>
+              <polyline points="9,46 50,12 90,23 130,11 171,38 211,48 251,19"></polyline>    
+            </svg>
+            <section class="points">
+              <div class="point-1">
+                <div class="tooltip">458</div>
+              </div>
+              <div class="point-2">
+                <div class="tooltip">812</div>
+              </div>
+              <div class="point-3">
+                <div class="tooltip">746</div>
+              </div>
+              <div class="point-4">
+                <div class="tooltip">877</div>
+              </div>
+              <div class="point-5">
+                <div class="tooltip">517</div>
+              </div>
+              <div class="point-6">
+                <div class="tooltip">434</div>
+              </div>
+              <div class="point-7">
+                <div class="tooltip">458</div>
+              </div>
+            </section>
+          </section>
+          <section class="data blue">
+            <svg>
+              <polyline points="9,61 50,50 90,65 130,55 171,61 211,74 251,64"></polyline>    
+            </svg>
+          <section class="points">
+            <div class="point-1">
+              <div class="tooltip">26</div>
+            </div>
+            <div class="point-2">
+              <div class="tooltip">41</div>
+            </div>
+            <div class="point-3">
+              <div class="tooltip">22</div>
+            </div>
+            <div class="point-4">
+              <div class="tooltip">36</div>
+            </div>
+            <div class="point-5">
+              <div class="tooltip">25</div>
+            </div>
+            <div class="point-6">
+              <div class="tooltip">13</div>
+            </div>
+            <div class="point-7">
+              <div class="tooltip">20</div>
+            </div>
+          </section>
+          </section>
+        </section>
+        <ul class="weekdays">
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+        </ul>
+      </main>
+    </section>
+  </div>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+    .frame {
+    position: relative;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: rgba(55,150,140,1);
+    color: #333;
+    }
+
+    .center {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,.3);
+    border-radius: 3px;
+    background: white;
+    overflow: hidden;
+    }
+
+    .header {
+    background: rgba(235,170,80,1);
+    padding: 15px;
+    color: #fff;
+    }
+
+    .titles, .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    }
+
+    .title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0px;
+    }
+
+    .subtitle {
+    font-size: .8rem;
+    font-weight: normal;
+    margin: 0px;
+    }
+
+    .period {
+    font-size: .8rem;
+    margin: 0px;
+    }
+
+    .revenue {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0px;
+    }
+
+    .graph {
+    padding: 10px;
+    position: relative;
+    }
+
+    .graph-titles {
+    display: flex;
+    margin-left: auto;
+    justify-content: space-between;
+    width: 50%;
+    }
+
+    .graph-title {
+    font-size: .6rem;
+    }
+
+    .graph-color {
+    height: 3px;
+    width: 10px;
+    border-radius: 2px;
+    margin: auto auto;
+    
+    &.first {
+        background: red;
+    }
+    
+    &.second {
+        background: blue;
+    }
+    
+    &.space {
+        background: transparent;
+    }
+    }
+
+    .graph-data {
+    position: relative;
+    height: 81px;
+    width: 260px;
+    margin: 10px auto;
+    }
+
+    .line {
+    position: absolute;
+    height: 1px;
+    width: 98%;
+    background: rgba(0,0,0,.1);
+    margin: 0px auto;
+    
+    &.top {
+        top: 0px;
+    }
+    
+    &.middle {
+        top: 40px;
+    }
+    
+    &.bottom {
+        top: 80px;
+    }
+    }
+
+    .weekdays {
+    display: flex;
+    justify-content: space-around;
+    text-transform: uppercase;
+    list-style: none;
+    color: rgba(0,0,0,.6);
+    margin: 0px;
+    padding: 0px;
+    font-size: .6rem;
+    margin-bottom: 10px;
+    }
+
+    svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+
+    polyline {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    }
+
+    .red {
+    stroke: red;
+    }
+
+    .blue {
+    stroke: blue;
+    }
+
+    .tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    color: #fff;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+
+    &:after {
+        position: absolute;
+        display: block;
+        content: '';
+        height: 6px;
+        width: 6px;
+        left: 50%;
+        margin-left: -3px;
+        bottom: -3px;
+        transform: rotate(45deg);
+    }
+    }
+
+    [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+
+    &:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+        transform: translate3d(-50%, 0, 0);
+    }
+    }
+
+    .red {
+
+    [class^="point-"], .tooltip, .tooltip:after {
+        background: red;
+    }
+
+    .point-1 { left: 7px; top: 43px; }
+    .point-2 { left: 48px; top: 9px; }
+    .point-3 { left: 88px; top: 20px; }
+    .point-4 { left: 128px; top: 8px; }
+    .point-5 { left: 169px; top: 35px; }
+    .point-6 { left: 209px; top: 45px; }
+    .point-7 { left: 249px; top: 16px; }
+
+    }
+
+    .blue {
+
+    [class^="point-"], .tooltip, .tooltip:after {
+        background: blue;
+    }
+
+    .point-1 { left: 7px; top: 58px; }
+    .point-2 { left: 48px; top: 47px; }
+    .point-3 { left: 88px; top: 62px; }
+    .point-4 { left: 128px; top: 52px; }
+    .point-5 { left: 169px; top: 58px; }
+    .point-6 { left: 209px; top: 71px; }
+    .point-7 { left: 249px; top: 61px; }
+
+    }
+
+</style>
