@@ -1,0 +1,164 @@
+<div class="frame">
+    <div class="center">
+        <section class="profile">
+        <section class="card">
+            <section class="image">
+            <figure class="circle out"></figure>
+            <figure class="circle in"></figure>
+            <img src="https://media.licdn.com/dms/image/D4D03AQGWG3sSfjMW4Q/profile-displayphoto-shrink_200_200/0/1688111944664?e=2147483647&v=beta&t=gNYpadn7VMoPHO_EoTqSyaPgN7amksqwDaSQ9AIRi3g" width="75" height="75" alt="Profile picture."/>
+            </section>
+            <h4 class="name">Mau Olagaray</h4>
+            <span class="role">Visual Artist</span>
+            <a href="https://www.instagram.com/maugarola/">
+            <button>Follow</button>
+            </a>
+            <a href="https://www.instagram.com/maugarola/">
+            <button>Message</button>
+            </a>
+        </section>
+        <section class="stats posts">
+            <h2>123</h2>
+            <p>Posts</p>
+        </section>
+        <section class="stats likes">
+            <h2>1387</h2>
+            <p>Likes</p>
+        </section>
+        <section class="stats followers">
+            <h2>501</h2>
+            <p>Followers</p>
+        </section>
+        </section>
+    </div>
+</div>
+<style>
+    .frame {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: linear-gradient(to top right, rgba(230,175,20,.8), rgba(190,105,60,.9));
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
+
+    .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+
+    .profile {
+    width: 320px;
+    height: 280px;
+    box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.5);
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .card {
+    background: white;
+    grid-row: span 3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: rgba(125,105,95,1);
+    }
+
+    .image {
+    margin: 30px auto 10px;
+    }
+
+    img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    }
+
+    .circle {
+    position: absolute;
+    border-radius: 50%;
+    border: solid 1px;
+    transition: transform 2s;
+    width: 83px;
+    height: 83px;
+    top: 9px;
+    left: 13px;
+    }
+
+    .image:hover {
+    & .out {
+        transform: rotate(-360deg) scale(1.1);
+    }
+    & .in {
+        transform: rotate(360deg) scale(1);
+    }
+    }
+
+    .out {
+    border-color: rgba(125,105,95,1) transparent rgba(125,105,95,1) rgba(125,105,95,1);
+    transform: rotate(-0deg) scale(1.1);
+    }
+
+    .in {
+    border-color: rgba(125,105,95,1) rgba(125,105,95,1)   rgba(125,105,95,1) transparent;
+    transform: rotate(-0deg) scale(1);
+    }
+
+    .name {
+    margin: 10px auto 0px;
+    }
+
+    .role {
+    font-size: .75rem;
+    margin-bottom: 20px;
+    }
+
+    button {
+    border: solid 1px rgba(125,105,95,1);
+    background: white;
+    border-radius: 50px;
+    width: 120px;
+    margin: 10px auto 0px;
+    color: rgba(125,105,95,1);
+    transition: all .5s;
+    }
+
+    button:hover {
+    background: rgba(125,105,95,1);
+    color: white;
+    }
+
+    .stats {
+    background: rgba(245,225,215,1);
+    text-align: center;
+    color: rgba(125,105,95,1);
+    font-size: .7rem;
+    line-height: .3rem;
+    padding-top: 20px;
+    transition: all .8s;
+    }
+
+    .stats:hover {
+    background: rgba(225,205,195,1);
+    }
+
+    .posts {
+
+    }
+
+    .likes {
+    border-top: solid white 1px;
+    border-bottom: solid white 1px;
+    }
+
+    .followers {
+
+    }
+</style>
