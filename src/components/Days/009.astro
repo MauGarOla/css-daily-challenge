@@ -1,0 +1,294 @@
+<div class="frame">
+    <div class="center">
+        <section class="drawing">
+        <figure class="moon">
+            <figure></figure>
+            <figure style="left: 30px; top: 50px;"></figure>
+            <figure style="left: 30px; top: 40px;"></figure>
+            <figure style="left: 10px; top: 40px;"></figure>
+            <figure style="left: 60px; top: 20px;"></figure>
+            <figure style="left: 20px; top: 20px;"></figure>
+            <figure style="left: 65px; top: 60px;"></figure>
+            <figure style="left: 70px; top: 40px;"></figure>
+            <figure style="left: 40px; top: 10px;"></figure>
+            <figure style="left: 30px; top: 72px;"></figure>
+            <figure style="left: 50px; top: 60px;"></figure>
+        </figure>
+        <section class="clouds">
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+            <figure></figure>
+        </section>
+        <section class="drop">
+            <figure style="left: 40px; animation-delay: .1s;"></figure>
+            <figure style="left: 80px; animation-delay: .7s;"></figure>
+            <figure style="left: 120px; animation-delay: .6s;"></figure>
+            <figure style="left: 160px; animation-delay: .8s;"></figure>
+            <figure style="left: 200px; animation-delay: 1s;"></figure>
+            <figure style="left: 240px; animation-delay: .3s;"></figure>
+            <figure style="left: 280px; animation-delay: .2s;"></figure>
+            <figure style="left: 320px; animation-delay: .4s;"></figure>
+            <figure style="left: 360px; animation-delay: .9s;"></figure>
+            <figure style="left: 400px; animation-delay: .5s;"></figure>
+            <figure style="left: 40px; animation-delay: .6s;"></figure>
+            <figure style="left: 80px; animation-delay: .2s;"></figure>
+            <figure style="left: 120px; animation-delay: 1s;"></figure>
+            <figure style="left: 160px; animation-delay: .9s;"></figure>
+            <figure style="left: 200px; animation-delay: .8s;"></figure>
+            <figure style="left: 240px; animation-delay: .1s;"></figure>
+            <figure style="left: 280px; animation-delay: .7s;"></figure>
+            <figure style="left: 320px; animation-delay: .5s;"></figure>
+            <figure style="left: 360px; animation-delay: .4s;"></figure>
+            <figure style="left: 400px; animation-delay: .3s;"></figure>
+            <figure style="left: 40px; animation-delay: .7s;"></figure>
+            <figure style="left: 80px; animation-delay: .6s;"></figure>
+            <figure style="left: 120px; animation-delay: .9s;"></figure>
+            <figure style="left: 160px; animation-delay: 1s;"></figure>
+            <figure style="left: 200px; animation-delay: .5s;"></figure>
+            <figure style="left: 240px; animation-delay: .2s;"></figure>
+            <figure style="left: 280px; animation-delay: .1s;"></figure>
+            <figure style="left: 320px; animation-delay: .8s;"></figure>
+            <figure style="left: 360px; animation-delay: .3s;"></figure>
+            <figure style="left: 400px; animation-delay: .4s;"></figure>
+        </section>
+        </section>
+        <section class="infos">
+        <span class="degree"><strong>12˚</strong></span>
+        <span class="wether">Wind: E 7 km/h</span>
+        <span class="date">TUE: <strong>21° / 9°</strong></span>
+        <span class="wether">Humidity: 87%</span>
+        <span class="date">WED: <strong>23° / 10°</strong></span>
+        </section>
+    </div>
+</div>
+
+<style>
+    .frame {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  --moon1: rgba(240,230,170,1);
+  --moon2: rgba(220,210,160,1);
+  --cloud1: rgba(40,50,75,1);
+  --cloud2: rgba(50,60,85,1);
+  --drop1: rgba(0,100,160,.8);
+  --drop2: rgba(0,120,180,.8);
+  --drop3: rgba(0,140,200,.8);
+  --sky: rgba(20,25,45,1);
+  --text: rgba(140,140,165,1);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.drawing {
+  height: 320px;
+  width: 400px;
+  background: var(--sky);
+  margin: 0px;
+  overflow: hidden;
+}
+
+.moon {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: var(--moon1);
+  border-radius: 40px;
+  box-shadow: 0 0 10px 0px var(--moon1);
+  top: 50px;
+  left: 50px;
+  overflow: hidden;
+  margin: 0px;
+  animation: rise 1s ease-out;
+}
+
+.moon > figure {
+  position: absolute;
+  margin: 0;
+  border-radius: 50%;
+  background: var(--moon2);
+}
+
+.moon > figure:nth-child(3n + 4) {
+  width: 8px;
+  height: 8px;
+}
+
+.moon > figure:nth-child(3n + 2) {
+  width: 5px;
+  height: 5px;
+}
+
+.moon > figure:nth-child(3n + 3) {
+  width: 3px;
+  height: 3px;
+}
+
+.moon > figure:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  top: 20px;
+  left: 40px;
+}
+
+.moon > figure:nth-child(3n) {
+  top: 20px;
+}
+
+.moon > figure:nth-child(4n) {
+  left: 40px;
+}
+
+@keyFrames rise {
+  from {
+    top: 250px;
+    left: 30px;
+  }
+  to {
+    top: 50px;
+    left: 50px;
+  }
+}
+
+
+.clouds {
+  position: absolute;
+  width: 400px;
+  height: 140px;
+  top: 180px;
+  left: 0px;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.clouds > figure {
+  position: absolute;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.clouds > figure:nth-child(-n + 2) {
+  background: var(--cloud1);
+  width: 300px;
+  height: 300px;
+}
+
+.clouds > figure:nth-child(n + 3) {
+  top: 60px;
+  background: var(--cloud2);
+  width: 300px;
+  height: 300px;
+}
+
+.clouds > figure:nth-child(1) {
+  left: -50px;
+}
+
+.clouds > figure:nth-child(2) {
+  left: 160px;
+}
+
+.clouds > figure:nth-child(3) {
+  left: -100px;
+}
+
+.clouds > figure:nth-child(4) {
+  top: 25px;
+  left: 70px;
+}
+
+.clouds > figure:nth-child(5) {
+  left: 280px;
+}
+
+.drop {
+  position: absolute;
+  height: 320px;
+  width: 400px;
+  overflow: hidden;
+  margin: 0px;
+}
+
+.drop > figure {
+  position: absolute;
+  margin: 0;
+  top: -10px;
+  border-radius: 100% 0px 100% 100%;
+  animation: rain infinite linear;
+}
+
+.drop > figure:nth-child(-n+10) {
+  height: 4px;
+  width: 4px;
+  background: var(--drop1);
+  animation-duration: 1.6s;
+}
+
+.drop > figure:nth-child(n+11):nth-child(-n+20) {
+  height: 6px;
+  width: 6px;
+  background: var(--drop2);
+  animation-duration: 1.3s;
+}
+
+.drop > figure:nth-child(n+21) {
+  height: 10px;
+  width: 10px;
+  background: var(--drop3);
+  animation-duration: 1s;
+}
+
+@keyframes rain {
+  0% {
+    transform: translate(0,0) scaleX(1) scaleY(1) rotate(-30deg);
+  }
+  85% {
+    transform: translate(-50px,323px) scaleX(1) scaleY(1) rotate(-30deg);
+  }
+  100% {
+    transform: translate(-55px,325px) scaleX(3) scaleY(0) rotate(-30deg);
+  }
+}
+
+
+.infos {
+  height: 80px;
+  width: 400px;
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: 110px 140px 150px;
+  align-items: center;
+  align-content: center;
+  justify-items: start;
+  font-weight: 100;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.date {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.degree{ 
+  grid-row: span 2;
+  font-size: 3rem;
+  margin-left: 20px;
+}
+
+strong {
+  font-weight: 350;
+  color: #555;
+}
+</style>
