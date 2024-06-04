@@ -1,0 +1,307 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div class="frame">
+  <div class="center">
+    <section class="img-1">
+      <input type="checkbox" id="img-1" class="open-close">
+      <img src="https://100dayscss.com/codepen/13-1.jpg" class="img-1"/>
+      <label for="img-1" class="btn open-close-1">+</label>
+      <img src="https://100dayscss.com/codepen/13-1-header.jpg" class="img-bg"/>
+      <section class="contact">
+        <span class="name">Julia Toth</span>
+        <button class="btn material-symbols-outlined">call</button>
+        <button class="btn material-symbols-outlined">chat_bubble</button>
+        <button class="btn material-symbols-outlined">favorite</button>
+      </section>
+    </section>
+    <section class="img-2">
+      <input type="checkbox" id="img-2" class="open-close">
+      <img src="https://100dayscss.com/codepen/13-2.jpg" class="img-2"/>
+      <label for="img-2" class="btn open-close-2">+</label>
+      <img src="https://100dayscss.com/codepen/13-1-header.jpg" class="img-bg"/>
+      <section class="contact">
+      <span class="name">Raul Moll</span>
+        <button class="btn material-symbols-outlined">call</button>
+        <button class="btn material-symbols-outlined">chat_bubble</button>
+        <button class="btn material-symbols-outlined">favorite</button>
+      </section>
+    </section>
+    <section class="img-3">
+      <input type="checkbox" id="img-3" class="open-close">
+      <img src="https://100dayscss.com/codepen/13-3.jpg" class="img-3"/>
+      <label for="img-3" class="btn open-close-3">+</label>
+      <img src="https://100dayscss.com/codepen/13-1-header.jpg" class="img-bg"/>
+      <section class="contact">
+      <span class="name">Sofia Besha</span>
+        <button class="btn material-symbols-outlined">call</button>
+        <button class="btn material-symbols-outlined">chat_bubble</button>
+        <button class="btn material-symbols-outlined">favorite</button>
+      </section>
+    </section>
+    <section class="img-4">
+      <input type="checkbox" id="img-4" class="open-close">
+      <img src="https://100dayscss.com/codepen/13-4.jpg" class="img-4"/>
+      <label for="img-4" class="btn open-close-4">+</label>
+      <img src="https://100dayscss.com/codepen/13-1-header.jpg" class="img-bg"/>
+      <section class="contact">
+      <span class="name">Sam Wenil</span>
+        <button class="btn material-symbols-outlined">call</button>
+        <button class="btn material-symbols-outlined">chat_bubble</button>
+        <button class="btn material-symbols-outlined">favorite</button>
+      </section>
+    </section>
+  </div>
+</div>
+
+<style>
+    .frame {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: whitesmoke;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 4px;
+  --main: rgb(236, 101, 101);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.open-close {
+  display: none;
+}
+
+div > section {
+  position: relative;
+  height: 194px;
+}
+
+//Button to open profile
+.img-1:hover ~ .open-close-1, .open-close-1:hover,
+.img-2:hover ~ .open-close-2, .open-close-2:hover,
+.img-3:hover ~ .open-close-3, .open-close-3:hover,
+.img-4:hover ~ .open-close-4, .open-close-4:hover {
+  filter: opacity(100%);
+  transform: scale(1);
+}
+
+.open-close-1,
+.open-close-2,
+.open-close-3,
+.open-close-4 {
+  filter: opacity(0%);
+  transform: scale(3);
+  position: absolute;
+  top: 72px;
+  left: 72px;
+  transition: transform .5s, filter 1s;
+}
+
+.img-1 > .img-1,
+.img-2 > .img-2,
+.img-3 > .img-3,
+.img-4 > .img-4 {
+  transform: translateY(0px);
+  transition: transform 1s;
+}
+
+.img-1:hover > input[type="checkbox"]:not(:checked) + .img-1,
+.img-2:hover > input[type="checkbox"]:not(:checked) + .img-2,
+.img-3:hover > input[type="checkbox"]:not(:checked) + .img-3,
+.img-4:hover > input[type="checkbox"]:not(:checked) + .img-4 {
+  filter: brightness(0.7);
+}
+
+//img-bg
+.img-bg {
+  position: absolute;
+  transform: translateY(-180px);
+  z-index: 2;
+  transition: transform 1s;
+}
+
+.img-1 > .img-bg {
+  top: -4px;
+  left: -4px;
+}
+
+.img-2 > .img-bg {
+  top: -4px;
+  left: -202px;
+}
+
+.img-3 > .img-bg {
+  top: -202px;
+  left: -4px;
+}
+
+.img-4 > .img-bg {
+  top: -202px;
+  left: -202px;
+}
+
+.contact {
+  position: absolute;
+  display: grid;
+  z-index: 4;
+  background: var(--main);
+  width: 400px;
+  height: 225px;
+  grid-template-columns: repeat(3, 75px);
+  grid-template-rows: 60px 60px;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  box-sizing: border-box;
+  transform: translateY(200px);
+  transition: transform 1s;
+}
+
+.name {
+  grid-column: 1 / span 3;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background: var(--main);
+  border-radius: 25px;
+  color: white;
+  align-content: center;
+  text-align: center;
+  font-size: 26px;
+  user-select: none;
+}
+
+.contact > .btn {
+  border: solid 1px whitesmoke;
+  transition: .2s all;
+}
+
+.btn:hover {
+  color: var(--main);
+  background: whitesmoke;
+  box-shadow: 2px 2px 6px 0px rgba(0,0,0,.2);
+}
+
+#img-1:checked ~ .img-bg, #img-1:checked ~ .open-close-1,
+#img-2:checked ~ .img-bg, #img-2:checked ~ .open-close-2,
+#img-3:checked ~ .img-bg, #img-3:checked ~ .open-close-3,
+#img-4:checked ~ .img-bg, #img-4:checked ~ .open-close-4 {
+  display: block;
+  filter: opacity(100%);
+  transform: translateY(0px);
+}
+
+.img-1 > input[type="checkbox"]:checked ~ .contact,
+.img-2 > input[type="checkbox"]:checked ~ .contact,
+.img-3 > input[type="checkbox"]:checked ~ .contact,
+.img-4 > input[type="checkbox"]:checked ~ .contact {
+  transform: translateY(0px);
+}
+
+#img-1:checked ~ .contact {
+  top: 175px;
+  left: -4px;
+}
+
+#img-2:checked ~ .contact {
+  top: 175px;
+  left: -202px;
+}
+
+#img-3:checked ~ .contact {
+  top: -22px;
+  left: -4px;
+}
+
+#img-4:checked ~ .contact {
+  top: -22px;
+  left: -202px;
+}
+
+#img-1:checked ~ .open-close-1,
+#img-2:checked ~ .open-close-2,
+#img-3:checked ~ .open-close-3,
+#img-4:checked ~ .open-close-4 {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  transform: translateY(300px) rotate(45deg);
+  animation: slide-down-rotate 2s ;
+}
+
+#img-1:checked ~ .open-close-1 {
+  top: -280px;
+  left: 320px;
+}
+
+#img-2:checked ~ .open-close-2 {
+  top: -280px;
+  left: 120px;
+}
+
+#img-3:checked ~ .open-close-3 {
+  top: -475px;
+  left: 320px;
+}
+
+#img-4:checked ~ .open-close-4 {
+  top: -475px;
+  left: 120px;
+}
+
+#img-1:checked ~ .img-1,
+#img-2:checked ~ .img-2,
+#img-3:checked ~ .img-3,
+#img-4:checked ~ .img-4 {
+  position: absolute;
+  z-index: 5;
+  width: 100px;
+  height: 100px;
+  border: solid 2px white;
+  border-radius: 50px;
+  box-shadow: 5px 5px 12px 1px rgba(0,0,0,.3);
+  transform: translateY(300px);
+}
+
+#img-1:checked ~ .img-1 {
+  top: -175px;
+  left: 144px;
+}
+
+#img-2:checked ~ .img-2 {
+  top: -175px;
+  left: -54px;
+}
+
+#img-3:checked ~ .img-3 {
+  top: -370px;
+  left: 144px;
+}
+
+#img-4:checked ~ .img-4 {
+  top: -370px;
+  left: -54px;
+}
+</style>
