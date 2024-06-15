@@ -1,0 +1,204 @@
+<div class="frame">
+    <div class="center">
+        <figure class="card">
+          <section class="front">
+            <img class="bike" src="https://100dayscss.com/codepen/bycicle.svg">
+            <section class="road">
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+            </section>
+          </section>
+          <section class="back">
+            <img class="helicopter" src="https://100dayscss.com/codepen/helicopter.svg">
+            <section class="wind">
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+              <figure></figure>
+            </section>
+          </section>
+        </figure>
+    </div>
+  </div>
+<style>
+    .frame {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  --bg: rgba(70,60,60,1);
+  --card: rgba(250,200,80,1);
+  background: var(--bg);
+  color: #333;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.center:hover .card {
+  transform: rotateX(180deg);
+}
+
+.card {
+  margin: 0;
+  width: 300px;
+  height: 180px;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  border-radius: 4px;
+  box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.3);
+  transform-style: preserve-3d;
+  transition: all 1.5s;
+}
+
+.front, .back {
+  width: 60%;
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card);
+  position: absolute;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+}
+
+.bike {
+  position: absolute;
+  transform-origin: bottom;
+  animation: 600ms ride infinite ease-in-out;
+}
+
+.road {
+  
+  & figure {
+  position: absolute;
+  bottom: 49px;
+  margin: 0;
+  width: 15px;
+  height: 4px;
+  border-radius: 3px;
+  background: var(--bg);
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  }
+  
+  & :nth-child(2n + 1) {
+    animation-duration: .5s;
+  }
+  
+  & :nth-child(2n) {
+    animation-duration: 1s;
+  }
+  
+  & :nth-child(3n+1) {
+    animation-duration: 1.5s;
+  }
+  & :nth-child(4n) {
+    animation-delay: .5s;
+  }
+}
+
+.back {
+  transform: rotateX(180deg)
+}
+
+.helicopter {
+  position: absolute;
+  z-index: 1;
+  animation: 2s fly infinite linear;
+}
+
+.wind {
+  
+  & figure {
+  position: absolute;
+  margin: 0;
+  width: 15px;
+  height: 4px;
+  border-radius: 3px;
+  background: var(--bg);
+  animation-name: movement;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  }
+  
+  & :nth-child(2n + 1) {
+    bottom: 80px;
+    animation-duration: .5s;
+  }
+  
+  & :nth-child(2n) {
+    bottom: 130px;
+    animation-duration: 1s;
+  }
+  
+  & :nth-child(3n+1) {
+    bottom: 70px;
+    animation-duration: 1.5s;
+  }
+  & :nth-child(4n) {
+    bottom: 50px;
+    animation-delay: .5s;
+  }
+}
+
+@keyframes ride {
+  50% {
+    transform: scaleY(.94)
+  }
+  to {
+    transform: scaleY(1)
+  }
+}
+
+@keyframes movement {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes fly {
+  25% {
+    transform: translateY(-10px)
+  }
+  50% {
+    transform: translateY(0)
+  }
+  75% {
+    transform: translateY(10px)
+  }
+}
+</style>
